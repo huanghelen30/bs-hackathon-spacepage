@@ -19,10 +19,17 @@ class ISSApi {
 
   // method to get location
   async getISSLocation() {
-    const response = await axios.get(this.baseUrl);
-    const iss_position = response.data.iss_position;
-    console.log(response);
-    console.log(iss_position);
+    try {
+      const response = await axios.get(this.baseUrl);
+      const iss_position = response.data.iss_position;
+      console.log(response);
+      console.log(iss_position);
+
+      this.position = response.data.iss_position;
+      this.timestamp = response.data.timestamp;
+    } catch (error) {
+      console.log(error);
+    }
   }
 }
 
