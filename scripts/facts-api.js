@@ -1,13 +1,20 @@
 console.log("Hello team");
 
-function getFact() {
-  fetch()
+function getImage() {
+  fetch("")
     .then((response) => response.json())
     .then((data) => {
-      document.getElementById("fact").innerText = data.text;
+      const imageElement = document.getElementById("image");
+
+      if (data.url.endsWith(".mp4")) {
+        console.log("Skipping video file...");
+        getImage();
+      } else {
+        imageElement.src = data.url;
+      }
     })
     .catch((error) => {
-      document.getElementById("fact").innerText = "Failed to load fact";
-      console.error("Error generating fact", error);
+      console.error("Error fetching image", error);
+      document.getElementById("image").src = "fallback-image.jpg";
     });
 }
