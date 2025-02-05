@@ -18,24 +18,27 @@ async function getFact() {
 }; 
 
 /* Alternative Code */
+
 console.log("Hello team");
 
-function getImage() {
-  fetch(" ") 
-    .then((response) => response.json())
-    .then((data) => {
-        const imageElement = document.getElementById("image");  element
+async function loadImage() {
+  const api = new ImageApi("tMTILk7VoS579XNXRfTEhveXsAJ7Mip9ZKbaN0hG"); 
+  const data = await api.getImage(); 
+  
+  const imageElement = document.getElementById("image");
 
-        if (data.url.endsWith(".mp4")) { 
-          console.log("Skipping video file...");
-          getImage(); 
-        } else {
-          imageElement.src = data.url; 
-        }
-    })
-    .catch((error) => {
-      console.error("Error fetching image", error);
-      document.getElementById("image").src = "fallback-image.jpg"; 
-    });
+  if (!imageElement) {
+      console.error("Error: Image element not found in the document.");
+      return;
+  }
+
+  if (data.media_type === "image") {
+      imageElement.src = data.url;
+      imageElement.alt = data.title || "NASA Image of the Day";
+  } else {
+      console.log("Skipping video file... Fetching another image.");
+      imageElement.src = "/assets/images/fallback-image.webp"; 
+  }
 }
-/* That was my initial Java Script code I failed to commit - Daria */ 
+
+document.getElementById("loadButton").addEventListener("click", loadImage);

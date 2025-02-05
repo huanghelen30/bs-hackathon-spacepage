@@ -37,6 +37,7 @@ body {
 
 .image-fetching {
   display: flex;
+  flex-direction: column;
   height: 100vh;
   justify-content: center;
   margin: 0;
@@ -46,6 +47,13 @@ body {
   display: block;
   margin: 0 auto;
   width: 50%;
+  margin-bottom: 5%;
+}
+
+#loadButton {
+  width: 40%;
+  height: 40%;
+  border-radius: 0.25rem;
 }
 
 /*# sourceMappingURL=picture.css.map */
