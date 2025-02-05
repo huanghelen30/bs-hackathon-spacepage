@@ -93,22 +93,6 @@ body {
   border-radius: 8px;
 }
 
-.about {
-  padding: 50px 20px;
-  text-align: center;
-  background-color: #34333f;
-}
-.about h2 {
-  font-size: 36px;
-  margin: 0;
-  color: #ffffff;
-}
-.about p {
-  font-size: 18px;
-  margin: 10px 0;
-  color: #cabdff;
-}
-
 .clouds {
   position: fixed;
   bottom: 0;
