@@ -63,8 +63,9 @@ class ISSApi {
 
   startTracking(interval = 5000) {
     this.getISSLocation(); // initial fetch
-    this.trackingInterval = setInterval(() => {
-      this.getISSLocation(); // get location every 5 seconds
+    this.trackingInterval = setInterval(async () => {
+      await this.getISSLocation(); // get location every 5 seconds
+      this.updateDisplay();
     }, interval);
   }
 
@@ -80,6 +81,8 @@ class ISSApi {
       // math to move location or transform it from lat/lon to percentage
       const x = (parseFloat(this.position.longitude) + 180) * (100 / 360);
       const y = (90 - parseFloat(this.position.latitude)) * (100 / 180);
+
+      console.log("Calculated position:", { x, y });
 
       marker.style.left = `${x}%`;
       marker.style.top = `${y}%`;
