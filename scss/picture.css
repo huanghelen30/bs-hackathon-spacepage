@@ -5,11 +5,12 @@
 }
 
 .header {
-  background-color: #34333F;
+  background-color: #34333f;
 }
 .header__nav {
   display: flex;
   align-items: center;
+  vertical-align: text-bottom;
   padding-left: 7rem;
 }
 .header__logo-image {
@@ -26,13 +27,19 @@
   padding: 0rem 2rem;
 }
 .header__list-item:hover {
-  color: #CABDFF;
+  color: #cabdff;
   text-decoration: underline;
 }
 .header__list-text {
-  color: #CABDFF;
+  color: #cabdff;
   line-height: 4.5rem;
   text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -41,4 +48,54 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
+}
+
+.picture {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  color: white;
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
+.picture__header {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  color: white;
+}
+.picture__astronaut {
+  display: block;
+  margin: 0 auto;
+  height: 50vh;
+  width: 50%;
+}
+.picture iframe {
+  display: block;
+  margin: 0 auto;
+}
+
+.image-fetching {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  margin: 0 65rem;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #f22b7d;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Montserrat;
+}
+button:hover {
+  background-color: #81104b;
 }/*# sourceMappingURL=picture.css.map */

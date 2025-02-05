@@ -5,11 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./scss/main.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="./scss/main.scss" />
 
     <title>Spacer</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/assets/images/icons8-space-50 (1).png"
+    />
   </head>
   <body>
+    <nav class="header__nav">
+      <a class="header__logo" href="/index.html">
+        <img
+          class="header__logo-image"
+          src="/assets/images/Nav logo.svg"
+          alt="SpaceSite logo"
+        />
+      </a>
+      <ul class="header__list">
+        <li class="header__list-item">
+          <a class="header__list-text" href="/index.html">Home</a>
+        </li>
+        <li class="header__list-item">
+          <a class="header__list-text" href="/pages/picture.html">Picture</a>
+        </li>
+      </ul>
+    </nav>
     <h1 class="title">Spacer</h1>
     <div class="iss-tracker">
       Check out where the International Space Station is currently located!
@@ -19,7 +40,10 @@
         <div class="timestamp">Time:</div>
       </div>
       <div class="map-container">
-        <img class="api-image" src="/assets/images/world.svg" />
+        <img
+          class="api-image"
+          src="https://upload.wikimedia.org/wikipedia/commons/8/83/Equirectangular_projection_SW.jpg"
+        />
         <div class="iss-marker"></div>
       </div>
     </div>

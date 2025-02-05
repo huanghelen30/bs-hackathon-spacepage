@@ -1,12 +1,67 @@
-@use 'partials/global' as *;
+@use "partials/global" as *;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  body {
-    background-image: url('../assets/images/background-picture.png'); 
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-position: center; 
-    height: 100vh;
+body {
+  background-image: url("../assets/images/background-picture.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+.picture {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  color: white;
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  &__header {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    color: white;
+  }
+  &__astronaut {
+    display: block;
+    margin: 0 auto;
+    height: 50vh;
+    width: 50%;
   }
 
+  iframe {
+    display: block;
+    margin: 0 auto;
+  }
+}
 
+.image-fetching {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
 
+button {
+  display: flex;
+  justify-content: center;
+  margin: 0 65rem;
+
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #f22b7d;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Montserrat;
+
+  &:hover {
+    background-color: darken(#ae1666, 10%);
+  }
+}

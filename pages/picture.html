@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="/scss/picture.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/scss/picture.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>SpaceSite: Image of the Day</title>
   </head>
@@ -11,18 +11,29 @@
     <header class="header">
       <nav class="header__nav">
         <a class="header__logo" href="/index.html">
-          <img class="header__logo-image" src="/assets/images/Nav logo.svg" alt="SpaceSite logo">
+          <img
+            class="header__logo-image"
+            src="/assets/images/Nav logo.svg"
+            alt="SpaceSite logo"
+          />
         </a>
         <ul class="header__list">
-          <li class="header__list-item"><a class="header__list-text" href="/index.html">Home</a></li>
-          <li class="header__list-item"><a class="header__list-text" href="/pages/facts.html">Picture</a></li>
+          <li class="header__list-item">
+            <a class="header__list-text" href="/index.html">Home</a>
+          </li>
+          <li class="header__list-item">
+            <a class="header__list-text" href="/pages/facts.html">Picture</a>
+          </li>
         </ul>
       </nav>
     </header>
-    <main>
-      <div class="image-fetching">
-        <img class="image-fetching__image" src="/assets/images/astronaut.svg" alt="waving astronaut">
-      </div>
+    <main class="picture">
+      <h1 class="picture__header">Space Station Picture of the Day</h1>
+      <img class="picture__astronaut" src="/assets/images/astronaut.svg" />
+      <img id="image-fetching" src="" alt="NASA Picture of the Day" />
+      <button class="picture__image" onclick="loadImage()">
+        Picture of the Day
+      </button>
       <script src="/scripts/picture-api.js"></script>
       <script src="/scripts/picture.js"></script>
     </main>
