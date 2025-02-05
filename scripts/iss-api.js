@@ -63,8 +63,9 @@ class ISSApi {
 
   startTracking(interval = 5000) {
     this.getISSLocation(); // initial fetch
-    this.trackingInterval = setInterval(() => {
-      this.getISSLocation(); // get location every 5 seconds
+    this.trackingInterval = setInterval(async () => {
+      await this.getISSLocation(); // get location every 5 seconds
+      this.updateDisplay();
     }, interval);
   }
 
