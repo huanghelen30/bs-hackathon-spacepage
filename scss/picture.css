@@ -35,9 +35,17 @@ body {
   height: 100vh;
 }
 
-.astronaut {
+.image-fetching {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+}
+
+.image-fetching__image {
   display: block;
   margin: 0 auto;
+  width: 50%;
 }
 
 /*# sourceMappingURL=picture.css.map */
