@@ -27,16 +27,27 @@ class ISSApi {
 
       this.position = response.data.iss_position;
       this.timestamp = response.data.timestamp;
+
+      return {
+        lat: parseFloat(this.position.latitude),
+        lon: parseFloat(this.position.longitude),
+        timestamp: this.timestamp,
+      };
     } catch (error) {
       console.log(error);
     }
   }
-}
 
-const ISSLocation = new ISSApi();
-async function getCurrentISSLocation() {
-  const data = await ISSLocation.getISSLocation();
-  console.log(data);
+  updateDisplay() {
+    if (this.latitudeDOM) {
+      this.latitudeDOM.textContent = `Latitude: ${this.position.latitude}`;
+    }
+    if (this.longitudeDOM) {
+      this.longitudeDOM.textContent = `Longitude: ${this.position.longitude}`;
+    }
+    if (this.timestampDOM) {
+      const date = new Date(this.timestamp * 1000);
+      this.timestampDOM.textContent = `Current time ${date}`;
+    }
+  }
 }
-
-getCurrentISSLocation();
