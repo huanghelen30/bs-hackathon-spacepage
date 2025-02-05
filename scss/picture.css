@@ -8,7 +8,9 @@
   background-color: #34333F;
 }
 .header__nav {
-  padding-left: 5rem;
+  display: flex;
+  align-items: center;
+  padding-left: 7rem;
 }
 .header__list {
   display: flex;
@@ -18,16 +20,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0rem 2rem;
+}
+.header__list-item:hover {
+  color: #CABDFF;
+  text-decoration: underline;
 }
 .header__list-text {
   color: #CABDFF;
-  line-height: 4rem;
+  line-height: 4.5rem;
   text-decoration: none;
 }
 
 body {
-  background-image: url("../assets/images/background-pictures.png");
+  background-image: url("../assets/images/background-picture.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  height: 100vh;
 }/*# sourceMappingURL=picture.css.map */
