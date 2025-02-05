@@ -23,4 +23,11 @@
   color: #CABDFF;
   line-height: 4rem;
   text-decoration: none;
+}
+
+body {
+  background-image: url("../assets/images/background-pictures.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }/*# sourceMappingURL=picture.css.map */

@@ -1,2 +1,10 @@
 @use 'partials/global' as *;
 
+  body {
+    background-image: url('../assets/images/background-pictures.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+  }
+
+
