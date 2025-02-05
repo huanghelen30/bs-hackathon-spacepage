@@ -9,13 +9,43 @@
 
 >>>>>>> 3ba5cedc794a5d9ea85f77528e011b3ebbfb290a
     <title>Spacer</title>
+    <link rel="stylesheet" href="./scss/main.css" />
+    <link rel="stylesheet" href="./scss/partials/_global.scss" />
   </head>
   <body>
-    <div class="iss-tracker">
-      Check out where the International Space Station is currently located!
-    </div>
+    <header class="header">
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__list-item"><a class="header__list-text" href="/index.html">Space</a></li>
+          <li class="header__list-item"><a class="header__list-text" href="/index.html">Home</a></li>
+          <li class="header__list-item"><a class="header__list-text" href="/pages/facts.html">Picture</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-content">
+      <section class="hero">
+        <div class="hero__content">
+          <h1>NAVIGATE THE UNIVERSE</h1>
+          <div class="iss-tracker">
+            Check out where the International Space Station is currently located!
+          </div>
+          <button>Start Exploring</button>
+        </div>
+        <div class="hero__image">
+          <img src="./assets/images/rocket-graphic.svg" alt="rocket" />
+        </div>
+      </section>
+    </main>
+
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <script src="./scripts/iss-api.js"></script>
     <script src="./scripts/index-page.js"></script>
+    </main>
+    <div class="clouds"></div>
+
+    <footer class="footer">
+      <p>&copy; 2025 Space Exploration. All rights reserved.</p>
+    </footer>
+
   </body>
 </html>

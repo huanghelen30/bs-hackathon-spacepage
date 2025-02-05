@@ -1,1 +1,183 @@
-/*# sourceMappingURL=main.css.map */
+body {
+  font-family: Montserrat, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #cabdff;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #34333f;
+  padding: 20px;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+.header__list-item {
+  display: inline-block;
+}
+.header__list-text {
+  color: #cabdff;
+  text-decoration: none;
+  font-size: 18px;
+}
+.header__list-text:hover {
+  color: #ffffff;
+}
+
+.iss-tracker {
+  padding: 20px;
+  text-align: center;
+  background-color: #34333f;
+  font-size: 18px;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 8px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 50px 20px;
+  gap: 40px;
+}
+.hero__content {
+  flex: 1;
+  max-width: 50%;
+}
+.hero__content h1 {
+  font-size: 48px;
+  margin: 0;
+  color: #ffffff;
+}
+.hero__content p {
+  font-size: 20px;
+  margin: 20px 0;
+  color: #cabdff;
+}
+.hero__content button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #F22B7D;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+}
+.hero__content button:hover {
+  background-color: #81104b;
+}
+.hero__image {
+  flex: 1;
+  max-width: 50%;
+}
+.hero__image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.about {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #34333f;
+}
+.about h2 {
+  font-size: 36px;
+  margin: 0;
+  color: #ffffff;
+}
+.about p {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #cabdff;
+}
+
+.clouds {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: url("../assets/images/cloud bg.svg") repeat-x;
+  background-size: cover;
+  z-index: 10;
+  animation: moveClouds 60s linear infinite;
+}
+
+@keyframes moveClouds {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #34333f;
+  color: #cabdff;
+  position: relative;
+  z-index: 20;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .header__list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .iss-tracker {
+    font-size: 16px;
+    padding: 15px;
+  }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero__content, .hero__image {
+    max-width: 100%;
+  }
+  .clouds {
+    height: 100px;
+  }
+}
+@media (max-width: 480px) {
+  .header__list-text {
+    font-size: 16px;
+  }
+  .iss-tracker {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .hero h1 {
+    font-size: 36px;
+  }
+  .hero p {
+    font-size: 16px;
+  }
+  .hero button {
+    font-size: 16px;
+  }
+  .clouds {
+    height: 80px;
+  }
+}/*# sourceMappingURL=main.css.map */
