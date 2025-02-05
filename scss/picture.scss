@@ -51,8 +51,9 @@ body {
 button {
   display: flex;
   justify-content: center;
-  margin: 0 65rem;
-
+  display: inline-block;
+  width: fit-content;
+  margin: 0 auto;
   padding: 10px 20px;
   font-size: 18px;
   background-color: #f22b7d;
