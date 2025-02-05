@@ -7,6 +7,9 @@
   },
   "message": "success"
 } */
+
+// DOM Manipulation
+
 class ISSApi {
   constructor() {
     this.baseUrl = "http://api.open-notify.org/iss-now.json";
@@ -15,6 +18,9 @@ class ISSApi {
       latitude: null,
       longitude: null,
     };
+    this.latitudeDOM = document.querySelector(".latitude");
+    this.longitudeDOM = document.querySelector(".longitude");
+    this.timestampDOM = document.querySelector(".timestamp");
   }
 
   // method to get location
@@ -41,6 +47,7 @@ class ISSApi {
   updateDisplay() {
     if (this.latitudeDOM) {
       this.latitudeDOM.textContent = `Latitude: ${this.position.latitude}`;
+      console.log(this.latitudeDOM);
     }
     if (this.longitudeDOM) {
       this.longitudeDOM.textContent = `Longitude: ${this.position.longitude}`;
@@ -48,6 +55,34 @@ class ISSApi {
     if (this.timestampDOM) {
       const date = new Date(this.timestamp * 1000);
       this.timestampDOM.textContent = `Current time ${date}`;
+      console.log(this.timestampDOM);
+    }
+
+    this.updateISSPosition();
+  }
+
+  startTracking(interval = 5000) {
+    this.getISSLocation(); // initial fetch
+    this.trackingInterval = setInterval(() => {
+      this.getISSLocation(); // get location every 5 seconds
+    }, interval);
+  }
+
+  stopTracking() {
+    if (this.trackingInterval) {
+      clearInterval(this.trackingInterval);
+    }
+  }
+
+  updateISSPosition() {
+    const marker = document.querySelector(".iss-marker");
+    if (marker) {
+      // math to move location or transform it from lat/lon to percentage
+      const x = (parseFloat(this.position.longitude) + 180) * (100 / 360);
+      const y = (90 - parseFloat(this.position.latitude)) * (100 / 180);
+
+      marker.style.left = `${x}%`;
+      marker.style.top = `${y}%`;
     }
   }
 }

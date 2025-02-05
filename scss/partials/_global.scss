@@ -7,6 +7,14 @@
 
 .header {
     background-color: #34333F;
+    &__nav {
+        display: flex;
+        align-items: center;
+        padding-left: 7rem;
+    }
+    &__logo-image {
+        padding: 0rem 2rem;
+    }
     &__list {
         display: flex;
         list-style: none;
@@ -14,9 +22,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 0rem 2rem;
+            &:hover {
+                color: #CABDFF;
+                text-decoration: underline;
+            }
         }
         &-text {
             color: #CABDFF;
+            line-height: 4.5rem;
             text-decoration: none;
         }
     }

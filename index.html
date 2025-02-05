@@ -3,16 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<<<<<<< HEAD
+    <link rel="stylesheet" href="./scss/main.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-=======
+    <link rel="stylesheet" href="./scss/main.scss" />
 
->>>>>>> 3ba5cedc794a5d9ea85f77528e011b3ebbfb290a
     <title>Spacer</title>
   </head>
   <body>
+    <h1 class="title">Spacer</h1>
     <div class="iss-tracker">
       Check out where the International Space Station is currently located!
+      <div class="iss-location">
+        <div class="longitude">Longitude:</div>
+        <div class="latitude">Latitude:</div>
+        <div class="timestamp">Time:</div>
+      </div>
+      <div class="map-container">
+        <img class="api-image" src="/assets/images/world.svg" />
+        <div class="iss-marker"></div>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <script src="./scripts/iss-api.js"></script>

@@ -1,9 +1,4 @@
 @use 'partials/global' as *;
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
 
   body {
     background-image: url('../assets/images/background-picture.png'); 
@@ -32,9 +27,3 @@
     width: 40%;
     border-radius: 0.25rem;
   }
-
-
-
-
-
-
