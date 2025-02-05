@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #34333F;
+}
+.header__nav {
+  padding-left: 5rem;
+}
+.header__list {
+  display: flex;
+  list-style: none;
+}
+.header__list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__list-text {
+  color: #CABDFF;
+  line-height: 4rem;
+  text-decoration: none;
+}/*# sourceMappingURL=picture.css.map */
