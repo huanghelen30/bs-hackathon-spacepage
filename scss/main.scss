@@ -3,7 +3,7 @@ body {
     font-family: Montserrat, sans-serif;
     margin: 0;
     padding: 0;
-    color: #cabdff;
+    color: #ffffff;
     background-color: #000;
     display: flex;
     flex-direction: column;
@@ -46,9 +46,8 @@ body {
   
   // ISS Tracker Section
   .iss-tracker {
-    padding: 20px;
-    text-align: center;
-    background-color: #34333f;
+    padding: 0;
+    text-align: left;
     font-size: 18px;
     margin: 20px auto;
     max-width: 800px;
@@ -81,7 +80,7 @@ body {
       p {
         font-size: 20px;
         margin: 20px 0;
-        color: #cabdff;
+        color: #ffffff;
       }
   
       button {
@@ -91,6 +90,7 @@ body {
         border: none;
         cursor: pointer;
         color: #ffffff;
+        font-family: Montserrat;
   
         &:hover {
           background-color: darken(#AE1666, 10%);

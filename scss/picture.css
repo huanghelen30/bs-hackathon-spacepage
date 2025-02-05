@@ -7,6 +7,9 @@
 .header {
   background-color: #34333F;
 }
+.header__nav {
+  padding-left: 5rem;
+}
 .header__list {
   display: flex;
   list-style: none;
@@ -18,6 +21,7 @@
 }
 .header__list-text {
   color: #CABDFF;
+  line-height: 4rem;
   text-decoration: none;
 }
 
@@ -46,6 +50,4 @@ body {
   display: block;
   margin: 0 auto;
   width: 50%;
-}
-
-/*# sourceMappingURL=picture.css.map */
+}/*# sourceMappingURL=picture.css.map */
