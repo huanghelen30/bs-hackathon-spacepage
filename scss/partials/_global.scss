@@ -1,0 +1,21 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #34333F;
+    &__list {
+        &-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &-text {
+            color: #CABDFF;
+            text-decoration: none;
+        }
+    }
+}
