@@ -12,6 +12,9 @@
   align-items: center;
   padding-left: 7rem;
 }
+.header__logo-image {
+  padding: 0rem 2rem;
+}
 .header__list {
   display: flex;
   list-style: none;
