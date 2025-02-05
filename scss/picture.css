@@ -19,4 +19,19 @@
 .header__list-text {
   color: #CABDFF;
   text-decoration: none;
-}/*# sourceMappingURL=picture.css.map */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../assets/images/background-pictures.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*# sourceMappingURL=picture.css.map */
