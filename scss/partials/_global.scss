@@ -8,6 +8,8 @@
 .header {
     background-color: #34333F;
     &__list {
+        display: flex;
+        list-style: none;
         &-item {
             display: flex;
             justify-content: center;
