@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/scss/picture.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>SpaceStation: Image of the Day</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__list-item"><a class="header__list-text" href="/index.html">Space</a></li>
+          <li class="header__list-item"><a class="header__list-text" href="/index.html">Home</a></li>
+          <li class="header__list-item"><a class="header__list-text" href="/pages/facts.html">Picture</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="image-fetching">
+        <img class="image-fetching__image" src="/assets/images/astronaut.svg" alt="waving astronaut">
+      </div>
+      <script src="/scripts/picture-api.js"></script>
+      <script src="/scripts/picture.js"></script>
+    </main>
+  </body>
+</html>

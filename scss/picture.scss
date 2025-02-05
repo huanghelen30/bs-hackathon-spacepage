@@ -1,0 +1,33 @@
+@use 'partials/global' as *;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-image: url('../assets/images/background-picture.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    height: 100vh;
+  }
+
+  .image-fetching {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .image-fetching__image {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  
+
+
+
+
